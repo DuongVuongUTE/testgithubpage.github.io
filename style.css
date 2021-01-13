@@ -6,7 +6,7 @@
 
 .navigation{
     position: fixed;
-    width: 220px;
+    width: 100%;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.75);
     top: 0;
@@ -32,6 +32,10 @@
 }
 .menu.active{
     z-index: 100;
+    position: fixed;
+}
+.menu.active span{
+    background-color: white;
 }
 .menu.active span:nth-child(1){
     position: absolute;
@@ -48,18 +52,73 @@
 .navigation ul{
     position: absolute;
     top: 50px;
+    width: 100%;
+}
+.navigation ul li {
+    width: 100%;
 }
 .navigation ul li a{
+    text-align: center;
+    display: block;
     text-decoration: none;
     color: white;
     font-size: 18px;
     padding: 10px 20px;
     width: 100%;
     height: 50px;
-    line-height: 50px;
-    transition: 1s ease;
+    line-height: 30px;
 }
 .navigation ul li a:hover{
     color: aquamarine;
-    transform: scaleX(-15px);
+    background-color: rgba(50, 50, 100, 0.75);
+}
+.main{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 0 20px;
+}
+.main h2{
+    color:chocolate;
+    font-size: 20px;
+    text-transform: uppercase;
+
+}
+.main p{
+    margin-top: 10px;
+    color: tomato;
+    font-size: 20px;
+    
+}
+.product{
+    display: flex;
+    margin-top: 30px;
+}
+.box{
+    width: 100%;
+    height: 300px;
+}
+.box1{
+    background-color: chocolate;
+}
+.box2{
+    background-color: aquamarine;
+}
+.box3{
+    background-color: burlywood;
+}
+@media screen and (max-width: 900px){
+    .main h2{
+        color:chocolate;
+        font-size: 16px;
+        text-transform: uppercase; 
+    }
+    .main p{
+        font-size: 14px;    
+    }
+    .product{
+        flex-direction: column;
+    }
+    .box{
+        max-height: 200px;
+    }
 }
